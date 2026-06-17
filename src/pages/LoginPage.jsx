@@ -1,43 +1,61 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
 import InputField from "../components/InputField";
 import Button from "../components/Button";
+import useAuthStore from "../store/useAuthStore";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
+  const { login, loading } = useAuthStore();
+  const [form, setForm] = useState({ email: "", password: "" });
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const result = await login(form);
+    if (!result.success) {
+      toast.error(result.error);
+      return;
+    }
+    toast.success("Logged in successfully");
+    navigate("/pay");
+  };
+
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
       <Navbar />
 
-      <div className="flex justify-center items-center py-20 px-6">
-        <div className="w-full max-w-md border border-zinc-800 bg-zinc-900/50 rounded-2xl p-8">
-          <h1 className="text-3xl font-bold mb-6">Login</h1>
+      <div className="flex items-center justify-center px-6 py-20">
+        <div className="w-full max-w-md rounded-md border border-zinc-800 bg-zinc-900/60 p-8">
+          <h1 className="text-3xl font-bold">Login</h1>
+          <p className="mt-2 text-sm text-zinc-400">Access your personal PayLink dashboard.</p>
 
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             <InputField
               type="email"
               placeholder="Email Address"
+              value={form.email}
+              onChange={(event) => setForm({ ...form, email: event.target.value })}
+              required
             />
 
             <InputField
               type="password"
               placeholder="Password"
+              value={form.password}
+              onChange={(event) => setForm({ ...form, password: event.target.value })}
+              required
             />
 
-            <Button type="submit">
-              Login
+            <Button type="submit" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
             </Button>
           </form>
 
-          <p className="text-center text-zinc-400 mt-6">
-            Don't have an account?{" "}
-            <NavLink
-              to="/signup"
-              className="text-white hover:underline"
-            >
-              Sign Up
-            </NavLink>
-          </p>
+          <Link to="/forgot-password" className="mt-5 inline-block text-sm font-medium text-zinc-300 hover:text-white">
+            Forgot password?
+          </Link>
         </div>
       </div>
     </div>

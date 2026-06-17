@@ -1,10 +1,10 @@
-import React from "react";
-
-const Button = ({ children, type = "button" }) => {
+const Button = ({ children, type = "button", className = "", disabled = false, ...props }) => {
   return (
     <button
       type={type}
-      className="w-full py-3 rounded-lg bg-white text-black font-semibold hover:bg-zinc-200 transition"
+      disabled={disabled}
+      className={`w-full rounded-md bg-white py-3 font-semibold text-black transition hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-60 ${className}`}
+      {...props}
     >
       {children}
     </button>

@@ -1,11 +1,14 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
+import useAuthStore from "../store/useAuthStore";
 
 const Navbar = () => {
+  const { accessToken } = useAuthStore();
   const NAV_ITEMS = [
     { title: "Home", path: "/" },
     { title: "About", path: "/about" },
     { title: "Contact", path: "/contact" },
+    { title: "Pay", path: "/pay" },
+    { title: "Records", path: "/services" },
     { title: "Privacy", path: "/privacy-policy" },
     { title: "Terms", path: "/terms-and-conditions" },
   ];
@@ -21,16 +24,16 @@ const Navbar = () => {
             PayLink
           </NavLink>
 
-          <div className="flex items-center gap-1">
+          <div className="hidden items-center gap-1 md:flex">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                  `px-3 py-2 text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-zinc-800 text-white"
-                      : "text-zinc-400 hover:text-white hover:bg-zinc-900"
+                      ? "text-white"
+                      : "text-zinc-400 hover:text-white"
                   }`
                 }
               >
@@ -40,10 +43,10 @@ const Navbar = () => {
           </div>
 
           <NavLink
-            to="/login"
+            to={accessToken ? "/pay" : "/login"}
             className="px-4 py-2 rounded-lg bg-white text-black text-sm font-semibold hover:bg-zinc-200 transition"
           >
-            Login
+            {accessToken ? "Dashboard" : "Login"}
           </NavLink>
         </div>
       </div>

@@ -1,11 +1,10 @@
-import React from "react";
-
-const InputField = ({ type, placeholder }) => {
+const InputField = ({ type, placeholder, className = "", ...props }) => {
   return (
     <input
       type={type}
       placeholder={placeholder}
-      className="w-full px-4 py-3 rounded-lg bg-zinc-950 border border-zinc-800 outline-none focus:border-zinc-600"
+      className={`w-full rounded-md border border-zinc-800 bg-zinc-950 px-4 py-3 outline-none transition focus:border-zinc-500 ${className}`}
+      {...props}
     />
   );
 };

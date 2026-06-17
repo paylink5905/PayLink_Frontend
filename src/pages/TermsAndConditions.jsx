@@ -5,37 +5,42 @@ const sections = [
   {
     title: "Acceptance of Terms",
     content:
-      "By accessing or using this platform, you agree to comply with and be bound by these Terms & Conditions.",
+      "By accessing, browsing, or making payments through this website, you agree to be bound by these Terms & Conditions and all applicable laws and regulations.",
   },
   {
-    title: "Use of Services",
+    title: "Purpose of the Website",
     content:
-      "Users agree to use the platform only for lawful purposes and in accordance with applicable laws and regulations.",
+      "This website is used to facilitate payments related to products, services, invoices, and other legitimate transactions. Users are responsible for ensuring that payment details entered are accurate before completing a transaction.",
+  },
+  {
+    title: "Payment Transactions",
+    content:
+      "Payments are processed through authorized third-party payment service providers. Successful completion of a payment does not alter the underlying agreement between the payer and the recipient regarding products, services, or transactions.",
   },
   {
     title: "User Responsibilities",
     content:
-      "Users are responsible for maintaining the confidentiality of their account information and for all activities conducted under their account.",
+      "Users agree to provide accurate information, use the website only for lawful purposes, and refrain from attempting unauthorized access, misuse, or disruption of the website and its services.",
   },
   {
-    title: "Payments",
+    title: "Refunds and Cancellations",
     content:
-      "Payment transactions may be processed through third-party payment service providers. We do not guarantee uninterrupted availability of external payment services.",
+      "Refund and cancellation requests are governed by the Refund Policy available on this website. Users are encouraged to review the policy before making payments.",
   },
   {
     title: "Limitation of Liability",
     content:
-      "We shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.",
+      "To the maximum extent permitted by law, we shall not be liable for indirect, incidental, special, or consequential damages resulting from the use of this website or third-party payment services.",
   },
   {
-    title: "Modifications",
+    title: "Changes to Terms",
     content:
-      "We reserve the right to modify these Terms & Conditions at any time. Continued use of the platform constitutes acceptance of the updated terms.",
+      "These Terms & Conditions may be updated periodically. Continued use of the website following any modifications constitutes acceptance of the revised terms.",
   },
   {
     title: "Contact Information",
     content:
-      "Questions regarding these Terms & Conditions may be directed to us through the contact details available on the website.",
+      "Questions regarding these Terms & Conditions may be directed through the contact information provided on the Contact Us page.",
   },
 ];
 
