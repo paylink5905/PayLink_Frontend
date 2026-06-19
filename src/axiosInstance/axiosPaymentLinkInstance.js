@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPaymentLinkInstance = axios.create({
-  baseURL: "/api/payment-links",
+  baseURL: `${import.meta.env.VITE_API_URL}/api/payment-links`,
   withCredentials: true,
 });
 
