@@ -4,6 +4,7 @@ const axiosAuthInstance = axios.create({
   baseURL: `${import.meta.env.VITE_API_URL}/api/auth`,
   withCredentials: true,
 });
+console.log("API URL:", import.meta.env.VITE_API_URL);
 
 axiosAuthInstance.interceptors.request.use((config) => {
   const token = localStorage.getItem("accessToken");
