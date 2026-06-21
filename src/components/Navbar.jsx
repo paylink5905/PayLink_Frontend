@@ -21,7 +21,7 @@ const Navbar = () => {
             to="/"
             className="text-xl font-bold text-white tracking-wide"
           >
-            PayLink
+            Mpoket
           </NavLink>
 
           <div className="hidden items-center gap-1 md:flex">

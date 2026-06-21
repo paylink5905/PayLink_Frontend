@@ -4,7 +4,7 @@ const sections = [
   {
     title: "Single user payment dashboard",
     content:
-      "PayLink is a personal website for one business owner to create and manage custom fixed amount payment links for their company.",
+      "Mpoket is a personal website for one business owner to create and manage custom fixed amount payment links for their company.",
   },
   {
     title: "Service and payment history",
@@ -14,7 +14,7 @@ const sections = [
   {
     title: "Manual payments first",
     content:
-      "Because Razorpay API access is not available yet, PayLink currently supports manual service creation and updates while keeping the Razorpay interface ready in the UI.",
+      "Because Razorpay API access is not available yet, Mpoket currently supports manual service creation and updates while keeping the Razorpay interface ready in the UI.",
   },
   {
     title: "Future payment links",
@@ -29,10 +29,10 @@ const AboutUs = () => {
       <Navbar />
 
       <main className="mx-auto max-w-5xl px-6 py-16">
-        <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">About PayLink</p>
+        <p className="text-sm font-semibold uppercase tracking-wide text-zinc-500">About Mpoket</p>
         <h1 className="mt-3 text-4xl font-bold">A simple private payment-link manager</h1>
         <p className="mt-4 max-w-3xl text-zinc-400">
-          PayLink keeps company payment requests, fixed amounts, and customer service records in one private dashboard.
+          Mpoket keeps company payment requests, fixed amounts, and customer service records in one private dashboard.
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">

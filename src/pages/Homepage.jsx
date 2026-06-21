@@ -13,7 +13,7 @@ const Homepage = () => {
           </span>
 
           <h1 className="mt-8 text-5xl font-bold tracking-tight md:text-6xl">
-            PayLink
+            Mpoket
             <span className="block text-zinc-400">for your company payments</span>
           </h1>
 
@@ -33,7 +33,7 @@ const Homepage = () => {
               to="/about"
               className="rounded-md border border-zinc-800 px-6 py-3 font-semibold text-zinc-300 transition hover:bg-zinc-900 hover:text-white"
             >
-              About PayLink
+              About Mpoket
             </NavLink>
           </div>
         </section>
@@ -56,7 +56,7 @@ const Homepage = () => {
       <footer className="border-t border-zinc-800">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-8 md:flex-row">
           <p className="text-sm text-zinc-500">
-            Copyright {new Date().getFullYear()} PayLink. All rights reserved.
+            Copyright {new Date().getFullYear()} Mpoket. All rights reserved.
           </p>
 
           <div className="flex gap-6 text-sm">

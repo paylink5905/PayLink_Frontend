@@ -29,7 +29,7 @@ const LoginPage = () => {
       <div className="flex items-center justify-center px-6 py-20">
         <div className="w-full max-w-md rounded-md border border-zinc-800 bg-zinc-900/60 p-8">
           <h1 className="text-3xl font-bold">Login</h1>
-          <p className="mt-2 text-sm text-zinc-400">Access your personal PayLink dashboard.</p>
+          <p className="mt-2 text-sm text-zinc-400">Access your personal Mpoket dashboard.</p>
 
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             <InputField

@@ -28,7 +28,7 @@ const DashboardSidebar = () => {
           <CreditCard size={20} />
         </span>
         <div>
-          <p className="text-lg font-bold">PayLink</p>
+          <p className="text-lg font-bold">Mpoket</p>
           <p className="text-xs text-zinc-500">Personal dashboard</p>
         </div>
       </NavLink>

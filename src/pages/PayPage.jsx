@@ -141,7 +141,7 @@ const PayPage = () => {
           <aside className="rounded-md border border-zinc-200 bg-white p-5">
             <h2 className="text-lg font-semibold text-zinc-950">Generated link</h2>
             <p className="mt-2 text-sm text-zinc-500">
-              After submit, the generated internal PayLink URL appears here and is saved to the service history.
+              After submit, the generated internal Mpoket URL appears here and is saved to the service history.
             </p>
 
             {generatedPaymentLink ? (
